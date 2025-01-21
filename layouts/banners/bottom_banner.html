@@ -1,0 +1,545 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --main-color: #e45804;
+  --section-background-color:#ffe3d3cc;
+  --background-color:#f7f7f7;
+  --box-shadow-color:var(--main-color);
+}
+
+ #consent_cookie_banner_container{
+ font-family: "Montserrat", sans-serif;
+ z-index: 99999999999999;
+  position: fixed;
+  }
+                                                               
+.unactive{
+display:none;
+}
+
+#consent_cookie_banner{
+ position: fixed;
+ bottom: 1%;
+ left: 50%;
+ display:flex;
+ padding:10px;
+ margin-bottom:10px;
+ background: var(--background-color);
+ align-items:center;
+ -webkit-box-shadow: 0px 0px 10px 0px var(--box-shadow-color);
+  -moz-box-shadow: 0px 0px 10px 0px var(--box-shadow-color);
+  box-shadow: 0px 0px 10px 0px var(--box-shadow-color);
+width: 98%;
+transform: translateX(-50%);
+box-sizing:border-box;
+}
+
+.consent_cookie_banner_title{
+  color:var(--main-color);
+  text-align:center;
+   font-size:28px;
+  line-height:39px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+  
+.consent_cookie_banner_title{
+  text-align:center;
+   font-size:14px;
+  line-height:39px;
+  font-weight:700;
+  margin-bottom:20px;
+  
+}
+
+
+.consent_cookie_banner_link{
+
+  background:var(--section-background-color);
+  padding: 2px 0 2px 0;
+  margin: 10px 20px 0 0;
+  text-align: center;
+}
+
+#consent_cookie_banner_links div{
+  flex-basis:100%;
+  
+}
+
+.consent_cookie_banner_link a{
+  color:var(--main-color);
+  font-size: 12px;
+  font-weight:700;
+  line-height:21px;
+  text-decoration: none;
+ }
+ 
+ #consent_cookie_banner_buttons{
+   display:flex;
+   justify-content: flex-end;
+   flex-direction: column;
+  
+ }
+ 
+#consent_cookie_banner_buttons button {
+    min-width: 200px;
+    min-height: 35px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+ .consent_cookie_banner_info {
+    font-size: 12px;
+	margin-bottom:10px;
+	margin-right:10px;
+}
+ 
+   #consent_cookie_banner_buttons .accept_all_button{
+   background-color:var(--main-color);
+   color:#FFFFFF;
+   border:none;
+   margin-bottom:10px;
+ }
+
+
+#consent_cookie_banner_container #main_content{
+scrollbar-color: var(--main-color) var(--background-color);
+scrollbar-width: thin;
+  max-height: 55vh;
+margin: 0 0 10px 10px;
+flex-grow: 5;
+}
+
+ 
+  #consent_cookie_banner_buttons .preferences_button{
+   background-color:var(--background-color);
+   color:var(--main-color);
+   border:var(--main-color) 1px solid;
+ }
+
+ #change_preferencess_button_wrap {
+  position:fixed;
+  bottom:2%;
+  z-index: 99999999999999;
+  display:none;
+ }
+
+ #change_preferencess_button_wrap #change_preferencess_button{
+border:none;
+background: transparent;
+cursor: pointer;
+transition: transform .2s ease-in-out;
+outline:none;
+ }
+
+ #change_preferencess_button_wrap #change_preferencess_button:hover{
+ transform: rotate(240deg);
+ }
+
+
+#consent_cookie_banner_buttons .save_preference{
+display:none;
+}
+#consent_cookie_banner_preferences{
+  display:none;
+margin: 10px 20px 0 0;
+font-size:12px;
+}
+
+#consent_cookie_banner_buttons .reject_preference{
+margin-bottom:10px;
+}
+
+ #consent_cookie_banner_preferences details{
+     background:var(--section-background-color);
+     margin-bottom:5px;
+     padding:5px;
+ }
+ #consent_cookie_banner_preferences details summary{
+   list-style: none;
+   font-weight:500;
+   
+ }
+ #consent_cookie_banner_preferences details summary span{
+ float:right;
+ 
+ }
+#consent_cookie_banner_preferences details summary .arrow{
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 15px solid var(--main-color);
+  
+transition: transform 0.3s ease;
+cursor:pointer;
+}
+
+#consent_cookie_banner_preferences details summary .arrowOpened{
+transform:rotate(180deg);
+
+}
+
+#consent_cookie_banner_preferences details summary span{
+margin:0 10px;
+display:inline;
+float:right;
+font-size:12px;
+color:var(--main-color);
+font-weight:700;
+position:relative;
+}
+
+.consent_cookie_banner_preferences_description{
+margin-top:10px;
+font-size:12px;
+}
+
+#consent_cookie_banner_preferences .checkbox_inp{
+ position:absolute;
+ opacity:0;
+ width:0; 
+ height:0;
+ appearance:none;
+}
+
+#consent_cookie_banner_preferences .checkbox_inner{
+ content:"";
+ width:45px;
+ height:19px;
+ border-radius:18px;
+ cursor:pointer;
+ background-color:white;
+transition: 0.3s ease;
+margin-top: -2px;
+}
+
+#consent_cookie_banner_preferences .checkbox_inner::after{
+ content:"";
+ position:absolute;
+ width:15px;
+ height:16px;
+ border-radius:10px;
+ background-color:var(--main-color);
+ top:1px;
+ left:3px;
+ transition: 0.3s ease;
+}
+
+.checkbox_inp:checked + .checkbox_inner{
+background-color:var(--main-color) !important; 
+}
+
+.checkbox_inp:checked + .checkbox_inner::after{
+background-color:white !important;
+transform:translateX(24px); 
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 780px){
+
+.consent_cookie_banner_link { 
+margin:10px 0 0 0;;
+}
+#consent_cookie_banner_buttons .accept_all_button{
+margin-right:0;
+}
+
+#consent_cookie_banner{
+display:block;
+}
+
+#consent_cookie_banner_preferences{
+margin: 10px 0 0 0;
+}
+
+#consent_cookie_banner_preferences .checkbox_inner{
+margin-top:-4px;
+}
+
+.accept_all_button,.preferences_button {
+  width:100% !important;
+  margin: 0 0 15px 0;
+ }
+  
+ #consent_cookie_banner_container #main_content {
+  margin: 0 0 15px 0;
+ }
+    
+    #consent_cookie_banner_buttons{
+   flex-wrap:wrap;
+ }
+      #consent_cookie_banner_buttons button{
+   font-size:14px;
+ }
+    
+    .consent_cookie_banner_title{
+    font-size:2px;
+      margin-bottom:5px;
+    }
+	
+	.consent_cookie_banner_title img{
+	display:inline;
+	}
+    .consent_cookie_banner_info {
+    font-size: 9px;
+}
+.consent_cookie_banner_link a{
+       font-size: 9px;
+    }
+    
+    
+    #consent_cookie_banner_preferences details summary{
+    font-size:9px;
+    }
+    .consent_cookie_banner_info{
+    line-height:18px;
+}
+    .consent_cookie_banner_preferences_description{
+    font-size:10px;
+    }
+    
+    
+    
+      #always_active{
+  font-size:10px !important;
+  }
+  }
+  
+
+
+
+</style>
+</head>
+<body>
+
+<div id="consent_cookie_banner_container">
+    <div id="consent_cookie_banner" data-nosnippet="true" role="dialog" aria-live="polite">
+        <div class="consent_cookie_banner_title">
+          <img src="https://cdn3.iconfinder.com/data/icons/food-3-11/128/food_Cookie-Biscuit-Cracker-Snack-256.png"  alt="Cookies" width="50px" height="50px"> 
+        </div>
+        <div id="main_content">
+            <div class="consent_cookie_banner_info">
+                We use technologies such as cookies to store and/or access information on your device. We do this to improve browsing experiences and display personalized and non-personalized ads. <br>
+                Consenting to these technologies allows us to process data such as browsing behavior or unique IDs on this site. <b>Not consenting or withdrawing consent may adversely affect some features and functionalities of the service.</b>
+            </div>
+            <div id="consent_cookie_banner_links">
+                <div class="consent_cookie_banner_link">
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div id="consent_cookie_banner_preferences">
+                <details>
+                    <summary>Functional<span class="arrow"></span><span id="always_active">Always Active</span></summary>
+                    <div class="consent_cookie_banner_preferences_description">
+                        Storing or accessing technical data is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or solely for the purpose of transmitting a communication over an electronic communications network.
+                    </div>
+                </details>
+                <details>
+                    <summary>Statistics<span class="arrow"></span>
+                        <span>
+                            <label for="analytics_checkbox">
+                                <input class="checkbox_inp" id="analytics_checkbox" type="checkbox"><span class="checkbox_inner"></span>
+                            </label>
+                        </span>
+                    </summary>
+                    <div class="consent_cookie_banner_preferences_description">
+                        Technical storage or access used solely for statistical purposes.
+                    </div>
+                </details>
+                <details>
+                    <summary>Marketing<span class="arrow"></span>
+                        <span>
+                            <label for="marketing_checkbox">
+                                <input class="checkbox_inp" id="marketing_checkbox" type="checkbox"><span class="checkbox_inner"></span>
+                            </label>
+                        </span>
+                    </summary>
+                    <div class="consent_cookie_banner_preferences_description">
+                        Technical storage or access is required to create user profiles for sending advertisements or tracking the user on the website or on multiple websites for similar marketing purposes.
+                    </div>
+                </details>
+            </div>
+            <div class="consent_cookie_banner_link">
+              <a href="https://business.safety.google/privacy/">How Google processes personal information</a>
+          </div>
+        </div>
+        <div id="consent_cookie_banner_buttons">
+            <button class="accept_all_button">
+                I Accept
+            </button>
+            <button class="preferences_button reject_preference">
+              Reject All
+          </button>
+            <button class="preferences_button show_preference">
+                Preferences
+            </button>
+            <button class="preferences_button save_preference">
+                Save Preferences
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="change_preferencess_button_wrap">
+  <button type="button" id="change_preferencess_button" >
+    <img src="https://cdn3.iconfinder.com/data/icons/food-3-11/128/food_Cookie-Biscuit-Cracker-Snack-256.png"  alt="Cookies" width="40px" height="40px">
+  </button>
+</div>
+
+ 
+<script>
+  
+       window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+  var bannerContainer = document.querySelector('#consent_cookie_banner_container');
+  var arrows = document.querySelectorAll('#consent_cookie_banner_preferences details summary .arrow');
+  var details = document.querySelectorAll('#consent_cookie_banner_preferences details summary');
+  var main = document.querySelector('#consent_cookie_banner_container #main_content');
+  var acceptAllButton = document.querySelector('#consent_cookie_banner_buttons .accept_all_button');
+  var prefButton = document.querySelector('#consent_cookie_banner_buttons .show_preference');
+  var savePrefButton = document.querySelector('#consent_cookie_banner_buttons .save_preference');
+  var rejectPrefButton = document.querySelector('#consent_cookie_banner_buttons .reject_preference');
+  var consentState = {};
+  var analytics_checkbox = document.getElementById("analytics_checkbox");
+  var marketing_checkbox = document.getElementById("marketing_checkbox");
+  var change_preferencess_button = document.getElementById("change_preferencess_button_wrap"); 
+      
+  
+      
+  
+  
+      function adjustPrefs(analytics,marketing){
+  consentState.marketing = marketing;
+  consentState.analytics = analytics;
+  }
+     adjustPrefs(false,false); 
+      
+    function consentUpdate(consentState){
+     if(document.cookie.includes("consent_cookie")){
+     var cookie = ";" + document.cookie;
+     var parts = cookie.split("; " + "consent_cookie" + "=");
+     var consent_cookie;
+    if(parts.length == 1){
+       parts = parts[0].split(' ')[0].split(';consent_cookie=')[1].split(';')[0]
+       consent_cookie = JSON.parse(parts);
+     }else{
+     consent_cookie = JSON.parse(parts.pop().split(";").shift());
+     }
+     
+     consentState.marketing = consent_cookie.consent.marketing;
+     consentState.analytics = consent_cookie.consent.analytics;
+     analytics_checkbox.checked =  consentState.analytics;
+     marketing_checkbox.checked =  consentState.marketing;
+     if(consentState.marketing){
+     consentState.marketing = "granted";
+     }else{
+     consentState.marketing = "denied";
+     }
+        if(consentState.analytics){
+     consentState.analytics = "granted";
+     }else{
+     consentState.analytics = "denied";
+     }  
+     
+     gtag("consent", "update", {
+     ad_storage: consentState.marketing,
+     analytics_storage: consentState.analytics,
+     ad_user_data: consentState.marketing,
+     ad_personalization: consentState.marketing,
+     personalization_storage: "granted",
+     functionality_storage: "granted",
+     security_storage: "granted"
+    })
+  
+     
+     }
+        window.dataLayer.push({
+        'event':'consent_updated'})
+  }
+     consentUpdate(consentState);
+      
+  function setCookies(consentState){
+  document.cookie = 'consent_cookie = {"consent":{"marketing":'+consentState.marketing+',"analytics":'+consentState.analytics+'}}; max-age=2592000; path=/';
+  }
+  function hideConsentBanner(){
+  bannerContainer.classList.add('unactive');
+  document.querySelector("#consent_cookie_banner_preferences").style.display="none";
+  prefButton.style.display='block';
+  savePrefButton.style.display='none';
+  }
+  
+  function showConsentBanner(){
+  bannerContainer.classList.remove('unactive');
+    
+  }
+      
+  for (var i = 0; i < arrows.length; i++){
+      details[i].onclick = function(){
+  this.children[0].classList.toggle('arrowOpened');
+  setTimeout(function(){
+     main.scrollBy(0, 300);
+  },0)
+  };  
+  }
+      
+  prefButton.onclick=function(){
+  document.querySelector("#consent_cookie_banner_preferences").style.display="block";
+  prefButton.style.display='none';
+  savePrefButton.style.display='block';
+  setTimeout(function(){
+  main.scrollBy(0, 100);
+  },0)
+      
+  }
+  
+  acceptAllButton.onclick = function(){
+  adjustPrefs(true,true);
+  setCookies(consentState);
+  consentUpdate(consentState);
+  hideConsentBanner();
+  change_preferencess_button.style.display = 'block';
+  }
+  
+  savePrefButton.onclick = function(){
+  adjustPrefs(analytics_checkbox.checked,marketing_checkbox.checked);
+  setCookies(consentState);
+  consentUpdate(consentState);
+  hideConsentBanner();
+  change_preferencess_button.style.display = 'block';
+  }
+  
+  rejectPrefButton.onclick = function(){
+  adjustPrefs(false,false);
+  setCookies(consentState);
+  consentUpdate(consentState);
+  hideConsentBanner();
+  change_preferencess_button.style.display = 'block';
+  }
+  
+  change_preferencess_button.onclick = function(){
+    showConsentBanner();
+    change_preferencess_button.style.display = 'none';
+  }
+  
+      
+  if (document.cookie.includes("consent_cookie")){
+  hideConsentBanner();
+  }    
+  
+  
+  if(bannerContainer.classList.contains('unactive')){
+    change_preferencess_button.style.display = 'block';
+  }
+  </script>
+</body>
+
+
+
