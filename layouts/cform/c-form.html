@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>Сanaclinic</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- <style>body{opacity: 0;}</style> -->
+    <link rel="stylesheet" href="css/cform.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+    
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__inner" style="border: none; padding: 30px 0 0 0">
+          </div>
+        </div>
+      </header>
+      <section id="single_product">
+        <div id="single_product_container">
+          <div id="single_product_inner">
+            <div class="single-product__info">
+              <h1>E-wizyta online nawet w 15 min</h1>
+              <p>Pierwsza wizyta 119zł</p>
+              <h2>WYPELNIJ WYWIAD MEDYCZNY</h2>
+            </div>
+            <form
+              id="single_product_form"
+              enctype="multipart/form-data"
+              action="#"
+              method="post"
+              rel="nofollow"
+            >
+              <div class="errorContainer"></div>
+              <div class="options">
+                <p class="question">Płeć:</p>
+                <label for="contactChoice1"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice1"
+                    name="pyt[0]"
+                    value="Kobieta"
+                  />
+                  <span class="custom-radio"></span>
+                  Kobieta</label
+                >
+                <label for="contactChoice2"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice2"
+                    name="pyt[0]"
+                    value="Mężczyzna"
+                  />
+                  <span class="custom-radio"></span>
+                  Mężczyzna</label
+                >
+              </div>
+              <div class="options women">
+                <p class="question">
+                  Czy jesteś w ciąży? lub czy podejrzewasz że jesteś w ciąży?
+                </p>
+                <label for="contactChoice15"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice15"
+                    name="pyt[0_0]"
+                    value="Tak"
+                  />
+                  <span class="custom-radio"></span>
+                  Tak</label
+                >
+                <label for="contactChoice16"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice16"
+                    name="pyt[0_0]"
+                    value="Nie"
+                  />
+                  <span class="custom-radio"></span>
+                  Nie</label
+                >
+                <p class="form_error">
+                  Wskazana konsultacja stacjonarna z lekarzem
+                </p>
+              </div>
+              <div class="options women">
+                <p class="question">Czy karmisz piersią?</p>
+                <label for="contactChoice17"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice17"
+                    name="pyt[0_1]"
+                    value="Tak"
+                  />
+                  <span class="custom-radio"></span>
+                  Tak</label
+                >
+                <label for="contactChoice18"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice18"
+                    name="pyt[0_1]"
+                    value="Nie"
+                  />
+                  <span class="custom-radio"></span>
+                  Nie</label
+                >
+                <p class="form_error1">
+                  Wskazana konsultacja stacjonarna z lekarzem
+                </p>
+              </div>
+              <div class="options">
+                <p class="question">
+                  Czy masz myśli samobójcze lub choroby psychiczne?
+                </p>
+                <label for="contactChoice3"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice3"
+                    name="pyt[1]"
+                    value="Tak"
+                  />
+                  <span class="custom-radio"></span>
+                  Tak</label
+                >
+                <label for="contactChoice4"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice4"
+                    name="pyt[1]"
+                    value="Nie"
+                  />
+                  <span class="custom-radio"></span>
+                  Nie</label
+                >
+                <p class="form_error2">
+                  Wskazana konsultacja stacjonarna z lekarzem
+                </p>
+              </div>
+              <div class="options">
+                <p class="question">
+                  Czy występują u Ciebie uczulenia na leki?
+                </p>
+                <label for="contactChoice5"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice5"
+                    name="pyt[2]"
+                    value="Tak"
+                  />
+                  <span class="custom-radio"></span>
+                  Tak</label
+                >
+                <label for="contactChoice6"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice6"
+                    name="pyt[2]"
+                    value="Nie"
+                  />
+                  <span class="custom-radio"></span>
+                  Nie</label
+                >
+                <div class="userText">
+                  Proszę podać na jakie leki jesteś uczulony
+                  <span class="required">*</span>
+                  <textarea
+                    placeholder="Proszę podać na jakie leki jesteś uczulony *"
+                    name="pyt[2_0]"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="options">
+                <p class="question">
+                  Czy przyjmujesz obecnie jakiekolwiek leki/preparaty?
+                </p>
+                <label for="contactChoice7"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice7"
+                    name="pyt[3]"
+                    value="Tak"
+                  />
+                  <span class="custom-radio"></span>
+                  Tak</label
+                >
+                <label for="contactChoice8">
+                  <input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice8"
+                    name="pyt[3]"
+                    value="Nie"
+                  />
+                  <span class="custom-radio"></span>
+                  Nie</label
+                >
+                <div class="userText1">
+                  Wymień wszystkie stosowane leki oraz częstotliwość
+                  przyjmowania
+                  <span class="required">*</span>
+                  <textarea
+                    placeholder="Wymień wszystkie stosowane leki oraz częstotliwość przyjmowania  *"
+                    name="pyt[3_0]"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="options">
+                <p class="question">Wybierz lek</p>
+                <p>
+                  Ostateczna decyzja co do zastosowanego preparatu należy zawsze
+                  do lekarza.
+                </p>
+                <select name="pyt[4]" id="select">
+                  <option value="Proszę lekarza o sugestię">
+                    Proszę lekarza o sugestię
+                  </option>
+                  <option value="S-Lab - 22%">S-Lab - 22%</option>
+                  <option value="S-Lab - 18%">S-Lab - 18%</option>
+                  <option value="Gorilla Glue #4 (CanPoland) - 22%">
+                    Gorilla Glue #4 (CanPoland) - 22%
+                  </option>
+                  <option value="Gorilla Glue (Four 20 Pharma GmbH) - 22%">
+                    Gorilla Glue (Four 20 Pharma GmbH) - 22%
+                  </option>
+                  <option value="Gorilla Glue (Four 20 Pharma GmbH) - 20%">
+                    Gorilla Glue (Four 20 Pharma GmbH) - 20%
+                  </option>
+                  <option value="DelaHaze: A U R O R A - 22%">
+                    DelaHaze: A U R O R A - 22%
+                  </option>
+                  <option value="GTH: A U R O R A Deutschland - 22%">
+                    GTH: A U R O R A Deutschland - 22%
+                  </option>
+                  <option value="Equiposa: A U R O R A 8/8 GmbH - 8%">
+                    Equiposa: A U R O R A 8/8 GmbH - 8%
+                  </option>
+                  <option value="Tilray - 18%">Tilray - 18%</option>
+                  <option value="Red No 2 - 19%">Red No 2 - 19%</option>
+                  <option value="Krypton (Canopy Growth) THC 25%">
+                    Krypton (Canopy Growth) THC 25%
+                  </option>
+                  <option value="Shishkaberry (CanPoland) 17%">
+                    Shishkaberry (CanPoland) 17%
+                  </option>
+                  <option value="Polfarmex - 18%">Polfarmex - 18%</option>
+                  <option value="C A N O P Y Growth - 20%">
+                    C A N O P Y Growth - 20%
+                  </option>
+                  <option value="C A N O P Y Growth - 8%">
+                    C A N O P Y Growth - 8%
+                  </option>
+                  <option value="C A N O P Y Growth - 10% / 7%">
+                    C A N O P Y Growth - 10% / 7%
+                  </option>
+                  <option value="Sol. 40% - ekstrakt">
+                    Sol. 40% - ekstrakt
+                  </option>
+                  <option value="Sol. 80% - ekstrakt">
+                    Sol. 80% - ekstrakt
+                  </option>
+                  <option value="Sol. 1% - olej pod język">
+                    Sol. 1% - olej pod język
+                  </option>
+                  <option value="Sol. 2,5% - olej pod język">
+                    Sol. 2,5% - olej pod język
+                  </option>
+                  <option value="Inny (wpisz jaki)">Inny (wpisz jaki)</option>
+                </select>
+              </div>
+              <div class="options">
+                <br />
+                <div class="userText3">
+                  Wpisz lek jaki potrzebujesz
+                  <span class="required">*</span>
+                  <textarea
+                    placeholder=" Wpisz nazwę leku *"
+                    name="pyt[4_0]"
+                  ></textarea>
+                </div>
+                <p class="question">
+                  Czy zdiagnozowano u Ciebie choroby przewlekłe lub choroby
+                  towarzyszące?
+                </p>
+                <label for="contactChoice9"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice9"
+                    name="pyt[5]"
+                    value="Tak"
+                  />
+                  <span class="custom-radio"></span>
+                  Tak</label
+                >
+                <label for="contactChoice10"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice10"
+                    name="pyt[5]"
+                    value="Nie"
+                  />
+                  <span class="custom-radio"></span>
+                  Nie</label
+                >
+                <div class="userText2">
+                  Wymień wszystkie choroby przewlekłe i choroby towarzyszące
+                  <span class="required">*</span>
+                  <textarea
+                    placeholder="Wymień wszystkie choroby przewlekłe i choroby towarzyszące   *"
+                    name="pyt[5_0]"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="options">
+                <p class="question">
+                  Napisz co Ci dolega<span class="required">*</span>
+                </p>
+                <textarea
+                  placeholder="Napisz swoje dolegliwości (np. bezsenność, bóle kręgosłupa, bóle głowy...)*"
+                  name="pyt[6]"
+                ></textarea>
+              </div>
+              <div class="options">
+                <p class="question">
+                  Czy posiadasz dokumentacje medyczną? (dokumentacja nie jest
+                  wymagana)
+                </p>
+                <div class="doc">
+                  <div>
+                    <label for="contactChoice11"
+                      ><input
+                        class="real-radio"
+                        type="radio"
+                        id="contactChoice11"
+                        name="pyt[7]"
+                        value="Tak, posiadam dokumentacje medyczną"
+                      />
+                      <span class="custom-radio"></span>
+                      Tak, posiadam dokumentacje medyczną</label
+                    >
+                  </div>
+                  <div>
+                    <label for="contactChoice12"
+                      ><input
+                        class="real-radio"
+                        type="radio"
+                        id="contactChoice12"
+                        name="pyt[7]"
+                        value="Nie posiadam dokumentacji medycznej"
+                      />
+                      <span class="custom-radio"></span>
+                      Nie posiadam dokumentacji medycznej</label
+                    >
+                  </div>
+                </div>
+                <div class="input_file">
+                  <p class="question">Dodaj dokumentację medyczną</p>
+                  <div class="file_inputs">
+                    <div class="input_element">
+                      <input
+                        type="file"
+                        class="file_input"
+                        id="file_input1"
+                        name="pyt[7_0][]"
+                      />
+                      <label for="file_input1">
+                        <svg
+                          width="15"
+                          height="10"
+                          viewBox="0 0 10 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M3.37891 3.32812C4.47266 2.23438 6.25 2.23438 7.34375 3.32812C8.39844 4.36328 8.4375 6.04297 7.48047 7.15625L7.36328 7.27344C7.1875 7.46875 6.89453 7.48828 6.69922 7.33203C6.50391 7.15625 6.48438 6.86328 6.66016 6.66797L6.75781 6.55078C7.42188 5.80859 7.38281 4.69531 6.67969 3.99219C5.95703 3.25 4.76562 3.25 4.02344 3.99219L1.81641 6.19922C1.09375 6.94141 1.09375 8.11328 1.81641 8.85547C2.51953 9.53906 3.63281 9.57812 4.375 8.93359L4.49219 8.83594C4.6875 8.66016 4.98047 8.67969 5.15625 8.875C5.33203 9.07031 5.3125 9.36328 5.11719 9.53906L5 9.63672C3.88672 10.6133 2.20703 10.5547 1.15234 9.51953C0.0585938 8.42578 0.0585938 6.62891 1.15234 5.53516L3.37891 3.32812ZM9.12109 8.19141C8.00781 9.28516 6.23047 9.28516 5.13672 8.19141C4.08203 7.13672 4.04297 5.47656 5 4.36328L5.09766 4.24609C5.27344 4.05078 5.56641 4.03125 5.76172 4.20703C5.95703 4.38281 5.97656 4.67578 5.80078 4.87109L5.72266 4.96875C5.05859 5.71094 5.09766 6.82422 5.80078 7.52734C6.52344 8.25 7.71484 8.25 8.45703 7.52734L10.6641 5.32031C11.3867 4.57812 11.3867 3.40625 10.6641 2.66406C9.96094 1.98047 8.84766 1.94141 8.10547 2.58594L7.98828 2.68359C7.79297 2.85938 7.5 2.83984 7.32422 2.64453C7.14844 2.44922 7.16797 2.15625 7.36328 1.98047L7.48047 1.88281C8.59375 0.90625 10.2734 0.964844 11.3281 2C12.4219 3.09375 12.4219 4.87109 11.3281 5.98438L9.12109 8.19141Z"
+                            fill="#979797"
+                          ></path>
+                        </svg>
+                        Wybierz plik
+                      </label>
+                      <strong>Wybrany plik:</strong>
+                      <span id="file-name1">Nie wybrano pliku</span>
+                    </div>
+                  </div>
+                  <button id="add_file">
+                    DODAJ KOLEJNĄ POZYCJĘ <span> &#129125;</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="options">
+                <br />
+                <div class="userText3">
+                  Wpisz lek jaki potrzebujesz
+                  <span class="required">*</span>
+                  <textarea
+                    placeholder=" Wpisz nazwę leku *"
+                    name="pyt[4_0]"
+                  ></textarea>
+                </div>
+                <div class="options">
+                <p class="question">
+                  Czy dodałeś naszą placówke medyczną do swojego konta IKP?<span
+                    class="required"
+                    >*</span
+                  >
+                </p>
+                <label for="contactChoice19"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice19"
+                    name="pyt[8]"
+                    value="Tak"
+                  />
+                  <span class="custom-radio"></span>
+                  Tak</label
+                >
+                <label for="contactChoice20"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice20"
+                    name="pyt[8]"
+                    value="Chcę to zrobić podczas wizyty"
+                  />
+                  <span class="custom-radio"></span>
+                  Chcę to zrobić podczas wizyty</label
+                >
+                <label for="contactChoice21"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice21"
+                    name="pyt[8]"
+                    value="Nie posiadam IKP"
+                  />
+                  <span class="custom-radio"></span>
+                  Nie posiadam IKP</label
+                >
+              </div>
+              <div class="form_ikp">
+                <p>
+                  Według rozporządzenia Ministra Zdrowia z 12.07.2023, lekarz
+                  przed przepisaniem leków odurzających czy psychotropowych musi
+                  sprawdzić Twoją historię leczenia.
+                </p>
+                <input
+                  type="button"
+                  id="form_show_ikp_modal"
+                  data-modal="#modal-ikp"
+                  value="Kliknij tutaj aby zobaczyć instrukcję jak przekazać dane lekarzowi. "
+                />
+                <p class="attention">
+                  Jeżeli nigdy nie korzystałeś z IKP zaznacz "Nie posiadam IKP"
+                </p>
+
+                <div class="modal_ikp">
+                  <div class="modal_ikp_box">
+                    <div id="close_modal_btn">
+                      <svg
+                        width="15"
+                        height="17"
+                        viewBox="0 0 23 25"
+                        fill="one"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                          fill="#333333"
+                        />
+                        <path
+                          d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z"
+                          fill="#333333"
+                        />
+                      </svg>
+                    </div>
+                    <div class="modal__body">
+                      <h1>
+                        <b
+                          >JAK UDOSTĘPNIĆ KONTO IKP NASZEJ PLACÓWCE
+                          MEDYCZNEJ?</b
+                        >
+                      </h1>
+                      <p>
+                        <span style="font-weight: 400"
+                          >Żeby móc wystawić e-receptę na marichuanę medyczną
+                          potrzebujemy mieć dostęp do pacjenta konta
+                          mojeIKP.</span
+                        >
+                      </p>
+                      <p>
+                        <b
+                          >UWAGA: Jeśli nie masz konta IKP i nigdy z niego nie
+                          korzystałeś – nie musisz nic robić.</b
+                        >
+                      </p>
+                      <p>
+                        <span style="font-weight: 400"
+                          >Zgodnie z rozporządzaniem Ministra Zdrowia z dnia 12
+                          lipca 2023 r. przed wystawieniem recepty na leki
+                          odurzające lub psychotropowe podczas badania lekarz ma
+                          obowiązek sprawdzić, jakie leki pacjentowi przepisano,
+                          które wykupił, zażywa i w jakich dawkach.</span
+                        >
+                      </p>
+                      <p>
+                        <span style="font-weight: 400"
+                          >Jak udostępnić dostęp do konta?</span
+                        >
+                      </p>
+                      <ul>
+                        <li style="font-weight: 400" aria-level="1">
+                          <span style="font-weight: 400"
+                            >Uruchom aplikację IKP</span
+                          >
+                        </li>
+                        <li style="font-weight: 400" aria-level="1">
+                          <span style="font-weight: 400"
+                            >Wejdź w „Menu” klikając trzy kropki w prawym górnym
+                            rogu ekranu a następnie w opcję &gt;&gt;
+                            „Uprawnienia”</span
+                          >
+                        </li>
+                        <li style="font-weight: 400" aria-level="1">
+                          <span style="font-weight: 400">Wybierz opcję:</span>
+                          <ul>
+                            <li style="font-weight: 400" aria-level="2">
+                              <b
+                                >Udostępnij dane pracownikowi lub placówce
+                                medycznej</b
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                        <li style="font-weight: 400" aria-level="1">
+                          <span style="font-weight: 400"
+                            >Następnie kliknij ’Placówka medyczna’</span
+                          >
+                        </li>
+                        <li style="font-weight: 400" aria-level="1">
+                          <span style="font-weight: 400"
+                            >W kolejnym kroku podaj dane naszej placówki
+                            medycznej.</span
+                          >
+                        </li>
+                        <li style="font-weight: 400" aria-level="1">
+                          <span style="font-weight: 400"
+                            >Nazwa placówki: CANA CLINIC</span
+                          >
+                        </li>
+                        <li style="font-weight: 400" aria-level="1">
+                          <span style="font-weight: 400"
+                            >Kliknij button „Szukaj” (nie musisz podawać adresu
+                            placówki)</span
+                          >
+                        </li>
+                      </ul>
+                      <p>
+                        <span style="font-weight: 400"
+                          >Dzięki tym kilku prostym krokom nasi lekarze będą
+                          mogli szybciej przystąpić do twojej e-wizyty.</span
+                        >
+                      </p>
+                      <p>&nbsp;</p>
+                      <p>
+                        <img
+                          decoding="async"
+                          class="alignnone size-medium wp-image-650"
+                          src="http://canaclinic.com.pl/img/ikp/1.jpg"
+                          alt=""
+                          width="138"
+                          height="300"
+                        /><img
+                          decoding="async"
+                          class="alignnone size-medium wp-image-649"
+                         src="http://canaclinic.com.pl/img/ikp/2.jpg"
+                          alt=""
+                          width="138"
+                          height="300"
+                        /><img
+                          decoding="async"
+                          class="alignnone size-medium wp-image-648"
+                          src="http://canaclinic.com.pl/img/ikp/3.jpg"
+                          alt=""
+                          width="138"
+                          height="300"
+                        /><img
+                          loading="lazy"
+                          decoding="async"
+                          class="alignnone size-medium wp-image-647"
+                          src="http://canaclinic.com.pl/img/ikp/4.jpg"
+                          alt=""
+                          width="138"
+                          height="300"
+                        /><img
+                          loading="lazy"
+                          decoding="async"
+                          class="alignnone size-medium wp-image-646"
+                          src="http://canaclinic.com.pl/img/ikp/5.jpg"
+                          alt=""
+                          width="138"
+                          height="300"
+                        /><img
+                          loading="lazy"
+                          decoding="async"
+                          class="alignnone size-medium wp-image-645"
+                          src="http://canaclinic.com.pl/img/ikp/6.jpg"
+                          alt=""
+                          width="138"
+                          height="300"
+                        /><img
+                          loading="lazy"
+                          decoding="async"
+                          class="alignnone size-medium wp-image-644"
+                          src="http://canaclinic.com.pl/img/ikp/7.jpg"
+                          alt=""
+                          width="138"
+                          height="300"
+                        /><img
+                          loading="lazy"
+                          decoding="async"
+                          class="alignnone size-medium wp-image-643"
+                          src="http://canaclinic.com.pl/img/ikp/8.jpg"
+                          alt=""
+                          width="138"
+                          height="300"
+                        /><img
+                          loading="lazy"
+                          decoding="async"
+                          class="alignnone size-medium wp-image-642"
+                          src="http://canaclinic.com.pl/img/ikp/9.jpg"
+                          alt=""
+                          width="138"
+                          height="300"
+                        /><img
+                          loading="lazy"
+                          decoding="async"
+                          class="alignnone size-medium wp-image-641"
+                          src="http://canaclinic.com.pl/img/ikp/10.jpg"
+                          alt=""
+                          width="138"
+                          height="300"
+                        />
+                      </p>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form_consent_container">
+                <input
+                  type="button"
+                  id="accept_all_btn"
+                  value="Zaznacz wszystkie"
+                />
+                <label for="contactChoice13"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice13"
+                    name="zgoda[0]"
+                    value="TAK"
+                  />
+                  <span class="custom-radio"></span>
+                  Potwierdzam że zapoznałem się i akceptuje
+                  <a href="https://canaclinic.pl/regulamin/">regulaminem</a>
+                  oraz
+                  <a href="https://canaclinic.pl/polityka-prywatnosci/"
+                    >politykę prywatności</a
+                  >
+                  portalu oraz ich postanowienia. Potwierdzam że podane przeze
+                  mnie informacje i dane są prawdziwe. Korzystam z usługi we
+                  własnym imieniu i z własnej woli.</label
+                ><br /><br />
+                <label for="contactChoice14"
+                  ><input
+                    class="real-radio"
+                    type="radio"
+                    id="contactChoice14"
+                    name="zgoda[1]"
+                    value="TAK"
+                  />
+                  <span class="custom-radio"></span>
+                  W związku z prawnymi wymaganiami MZ, lekarz koniecznie musi
+                  odbyć z pacjentem rozmowę telefoniczną. Prosimy o OCZEKIWANIE
+                  NA TELEFON od lekarza, który powinien zadzwonić w ciągu 1
+                  godziny roboczej od wypełnienia formularza i opłaceniu
+                  konsultacji. Lekarz TRZYKROTNIE spróbuje się z Państwem
+                  połączyć. W przypadku braku odebrania telefonu konsultacja
+                  jest zamykana bez wystawienia recepty.</label
+                ><br />
+              </div>
+              <button
+                type="submit"
+                class="disabled"
+                id="form_add_to_cart_btn"
+                name="add_to_cart"
+                value="196"
+                disabled
+              >
+                DODAJ DO KOSZYKA <span> &#129125;</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__row">
+        </div>
+        <div class="footer__row">
+          <div class="footer__copyright">
+            Copyright © 2023 Canaclinic™. All Rights Reserved
+          </div>
+
+          <ul class="footer__policy">
+            <li>
+              <a
+                href="https://canaclinic.pl/polityka-prywatnosci/"
+                rel="nofollow"
+                >Polityka Prywatności</a
+              >
+            </li>
+            <li>
+              <a href="https://canaclinic.pl/regulamin/" rel="nofollow"
+                >Regulamin</a
+              >
+            </li>
+            <li>
+              <a href="https://canaclinic.pl/polityka-cookie/" rel="nofollow"
+                >Polityka Cookie</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="js/cana-form-js.min.js"></script>
+  </body>
+</html>
